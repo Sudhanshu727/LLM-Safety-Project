@@ -15,9 +15,15 @@ This project explores how large language models (LLMs) can produce harmful, bias
 
 ## 📁 Project Structure
 ├── data/ # Collected prompts and responses
+
 ├── models/ # Saved classifier models
+
 ├── scripts/ # Scripts for generation, classification, mitigation
+
 ├── notebooks/ # Jupyter notebooks for testing or analysis
+
 ├── results/ # Graphs, evaluation results
+
 ├── docs/ # Report or supporting documents
+
 └── README.md # Project description
