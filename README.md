@@ -7,7 +7,7 @@ This project is focused on evaluating and improving the **safety of Large Langua
 ## 📁 Project Structure
 
 ```
-text/
+LLM Safety Project/
 ├── script/
 │   ├── merge_labeled_data.py            # Merge new labels with the main dataset
 │   ├── auto_label_with_gemini.py        # Auto-label responses using Gemini API
