@@ -49,7 +49,7 @@ Set your API keys as environment variables:
 
 ```bash
 export GEMINI_API_KEY='your-gemini-api-key'
-export GROQ_API_KEY='your-groq-api-key'
+export LLAMA_API_KEY='your-groq-api-key'
 ```
 
 Alternatively, use a `.env` file and load it with a library like `python-dotenv`.
