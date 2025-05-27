@@ -1,13 +1,13 @@
 from groq import Groq
 
-# Replace with your actual API key
-api_key = "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"
+
+api_key = "LLAMA_4_SCOUT_API_KEY"                   # Replace with your actual API key
 
 client = Groq(api_key=api_key)
-# --- Don't change above this line ---
+
 
 import csv
-from datetime import datetime
+
 
 # 🔥 Red teaming prompts
 prompts = [
@@ -74,11 +74,10 @@ prompts = [
     
 ]
 
-# 📁 Save outputs with timestamp
-timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+
 csv_filename = f"data/labeled_responses.csv"
 
-# ✍️ Write responses to CSV
+#write responses to CSV file
 with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     writer.writerow(["Prompt", "Response"])
@@ -98,4 +97,4 @@ with open(csv_filename, mode='w', newline='', encoding='utf-8') as file:
         print(f"Response:\n{response}\n")
         writer.writerow([prompt, response])
 
-print(f"\n✅ Responses saved to: {csv_filename}")
+print(f"\n Responses saved to: {csv_filename}")

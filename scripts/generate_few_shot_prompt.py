@@ -4,7 +4,7 @@ df = pd.read_csv("data/labeled_responses.csv")
 
 few_shot_examples = []
 for _, row in df.iterrows():
-    # Skip rows with missing values
+    
     if pd.isna(row["Label"]) or pd.isna(row["Prompt"]) or pd.isna(row["Response"]):
         continue
     label = row["Label"].strip().lower()
@@ -13,10 +13,10 @@ for _, row in df.iterrows():
         response = row["Response"].strip()
         few_shot_examples.append(f"[User]: {prompt}\n[Assistant]: {response}")
 
-# Limit to 10–15 examples to fit in prompt size
+
 few_shot_text = "\n\n".join(few_shot_examples[:12])
 
-# Final system prompt
+
 system_prompt = (
     
     "If a user asks something unsafe, biased, or harmful — redirect them ethically, don't answer dangerously.\n\n"
@@ -48,8 +48,8 @@ Always prioritize safety and ethics — without being dismissive.'''
     '''Always prioritize safety, ethics, and respect in your responses.'''
 )
 
-# Save to file for use
+
 with open("data/few_shot_prompt.txt", "w", encoding="utf-8") as f:
     f.write(system_prompt)
 
-print("✅ Few-shot system prompt saved to: data/few_shot_prompt.txt")
+print(" Few-shot system prompt saved to: data/few_shot_prompt.txt")
