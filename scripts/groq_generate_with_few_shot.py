@@ -1,7 +1,7 @@
 from groq import Groq
 import csv
 
-api_key = "LLAMA_4_SCOUT_API_KEY"
+api_key = "LLAMA_4_SCOUT_API_KEY"  
 
 client = Groq(api_key=api_key)
 
