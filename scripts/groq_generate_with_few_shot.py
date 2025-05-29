@@ -1,7 +1,7 @@
 from groq import Groq
 import csv
 
-api_key = "LLAMA_4_SCOUT_API_KEY"  
+api_key = "LLaMA_4_SCOUT_API_KEY"  # Replace with your actual API key
 
 client = Groq(api_key=api_key)
 
@@ -35,7 +35,7 @@ with open("results/red_team_outputs.csv", mode="w", newline='', encoding="utf-8"
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt}
             ],
-            temperature=2,
+            temperature=0.5,
             max_tokens=400,
             top_p=1
         )
